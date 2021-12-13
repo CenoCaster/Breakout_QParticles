@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+	<link rel="stylesheet" href="styles/style.css">
+
+  </head>
+  <body>
+    <header></header>
+    <main>
+		
+		<script src="./node_modules/pixi.js/dist/browser/pixi.min.js"></script>
+		<script src="./node_modules/@pixi/graphics-extras/dist/browser/graphics-extras.min.js"></script>
+		<!-- <script src="./scripts/testing.js"></script> -->
+		<script src="./scripts/app.js"></script>
+
+		<!-- <script src="https://pixijs.download/release/pixi.js"></script> -->
+		<!-- <script type="text/javascript" src="scripts/index.js"></script> -->
+		<!-- <script>
+
+			// document.body.style.cursor = "help";
+
+			class Fermions extends PIXI.Sprite {
+				constructor(texture) {
+					super(texture);
+					this.fermion = null;
+					this
+				}
+			}
+
+			const Width = 905;
+			const Height = 1000;
+
+			const Sq_dim = 20;
+			const Sq_dist = Sq_dim + 5; // 5 is an arbitrary number
+			const Sq_w_offset = 5;
+			const Sq_h_offset = 80;
+
+			let squares = new Array();
+			let app = new PIXI.Application({ width: Width, height: Height });
+
+			document.getElementById("gamearea").appendChild(app.view);
+
+			for(let j = 0; j < 20; j++){
+				squares[j] = new Array();
+				for(let i = 0; i < Math.floor(Width / (Sq_dist)); i++) {
+					squares[j][i] = new Fermions.from("assets/down.png");
+					squares[j][i].anchor.set(0);
+					squares[j][i].width = squares[j][i].height = Sq_dim;
+					squares[j][i].x = (i*Sq_dist) + Sq_w_offset;
+					squares[j][i].y = (j*Sq_dist) + Sq_h_offset;
+
+					squares[j][i].interactive = true;
+					const thisSquareJ = j;
+					const thisSquareI = i;
+					squares[j][i].on('pointerdown', (event) => {
+						squares[thisSquareJ][thisSquareI].destroy();
+						squares[thisSquareJ][thisSquareI] = null;
+					});
+					
+					let temp_ferm_type = Math.floor(Math.random()*100) % 4;
+
+					switch(temp_ferm_type) {
+						case 0:
+							squares[j][i].texture = PIXI.Texture.from("assets/up.png");
+							break;
+						case 1:
+							squares[j][i].texture = PIXI.Texture.from("assets/down.png");
+							break;
+						case 2: 
+							squares[j][i].texture = PIXI.Texture.from("assets/charged.png");
+							break;
+						case 3:	
+							squares[j][i].texture = PIXI.Texture.from("assets/neutrino.png");
+							break;
+						default:
+							squares[j][i].texture = PIXI.Texture.from("assets/up.png");
+							break;
+					}
+
+					squares[j][i].fermion = temp_ferm_type;
+
+					console.log(squares[j][i].fermion);
+
+					app.stage.addChild(squares[j][i]);
+				}
+			}
+		</script> -->
+		
+	</main>
+    <footer></footer>
+  </body>
+</html>
